@@ -78,9 +78,19 @@ function ladeRechner() {
         return;
     }
 
+    let preis = 139;
+
+    // Kurse mit 149 €
+    if (
+        kursId === "KU-BE-P5F8GV" ||
+        kursId === "KU-BE-25SG1D"
+    ) {
+        preis = 149;
+    }
+
     document.getElementById("rechner").innerHTML = `
         <iframe
-        src="https://zpp-konzepte.de/courses/rechner/embed?preis=140&kursId=${kursId}&color=d97706"
+        src="https://zpp-konzepte.de/courses/rechner/embed?preis=${preis}&kursId=${kursId}&color=d97706"
         width="100%"
         height="350"
         frameborder="0">
